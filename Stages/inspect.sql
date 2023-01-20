@@ -1,3 +1,7 @@
+-- List items in the stage
+list @like_a_window_into_an_s3_bucket;
+list @like_a_window_into_an_s3_bucket/<file_name>;
+
 --The data in the file, with no FILE FORMAT specified
 select $1
 from @garden_plants.veggies.like_a_window_into_an_s3_bucket/LU_SOIL_TYPE.tsv;

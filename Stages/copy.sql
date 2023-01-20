@@ -22,3 +22,20 @@ copy into vegetable_details_soil_type
 from @like_a_window_into_an_s3_bucket
 files = ( 'VEG_NAME_TO_SOIL_TYPE_PIPE.txt')
 file_format = ( format_name=PIPECOLSEP_ONEHEADROW );
+
+copy into AUTHOR_INGEST_XML
+from @like_a_window_into_an_s3_bucket
+files = ( 'author_with_header.xml')
+file_format = ( format_name=XML_FILE_FORMAT );
+
+-- XML
+copy into AUTHOR_INGEST_XML
+from @like_a_window_into_an_s3_bucket
+files = ( 'author_with_header.xml')
+file_format = ( format_name=XML_FILE_FORMAT );
+
+-- JSON
+copy into AUTHOR_INGEST_JSON
+from @like_a_window_into_an_s3_bucket
+files = ( 'author_with_header.json')
+file_format = ( format_name=JSON_FILE_FORMAT );

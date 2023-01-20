@@ -28,3 +28,28 @@ values
  (5,'X','short','in',66,77)
 ,(8,'Y','tall','cm',98,99)
 ;
+
+INSERT INTO AUTHOR(AUTHOR_UID,FIRST_NAME,MIDDLE_NAME, LAST_NAME)
+Values
+(1, 'Fiona', '','Macdonald')
+,(2, 'Gian','Paulo','Faleschini');
+
+-- Using Sequences
+INSERT INTO AUTHOR(AUTHOR_UID, FIRST_NAME, MIDDLE_NAME, LAST_NAME)
+Values
+(SEQ_AUTHOR_UID.nextval, 'Laura', 'K','Egendorf')
+,(SEQ_AUTHOR_UID.nextval, 'Jan', '','Grover')
+,(SEQ_AUTHOR_UID.nextval, 'Jennifer', '','Clapp')
+,(SEQ_AUTHOR_UID.nextval, 'Kathleen', '','Petelinsek');
+
+-- Insert records into the book table
+-- You don't have to list anything for the
+-- BOOK_UID field because the default setting
+-- will take care of it for you
+INSERT INTO BOOK(TITLE,YEAR_PUBLISHED)
+VALUES
+ ('Food',2001)
+,('Food',2006)
+,('Food',2008)
+,('Food',2016)
+,('Food',2015);
