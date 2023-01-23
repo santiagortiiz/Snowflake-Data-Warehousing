@@ -1,3 +1,7 @@
+-- File formats come in 6 flavors - CSV, JSON, XML, PARQUET, ORC, & AVRO
+
+-- Warehousing
+
 SHOW FILE FORMATS IN ACCOUNT;
 
 create file format garden_plants.veggies.PIPECOLSEP_ONEHEADROW
@@ -61,3 +65,16 @@ ALLOW_DUPLICATE = FALSE
 STRIP_OUTER_ARRAY = TRUE
 STRIP_NULL_VALUES = FALSE
 IGNORE_UTF8_ERRORS = FALSE;
+
+-- Data Lakes
+
+-- Exploratory file format
+create file format zmd_file_format_1
+RECORD_DELIMITER = '^';
+
+-- Best for product coordination suggestions file
+create or replace file format zmd_file_format_1
+RECORD_DELIMITER = ';';
+
+create file format zmd_file_format_2
+FIELD_DELIMITER = '^';
