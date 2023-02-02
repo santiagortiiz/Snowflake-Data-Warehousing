@@ -1,3 +1,8 @@
+create stage s3_stage
+  storage_integration = s3_int
+  url = 's3://epam-lab/raw-data'
+  file_format = my_csv_format;
+
 create stage UNI_KLAUS_CLOTHING
     url = 's3://uni-klaus/clothing';
 
